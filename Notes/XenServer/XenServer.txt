@@ -1,0 +1,2 @@
+Server机：
+/etc/xapi.d/plugins                         #用来存放自定义脚本的目录

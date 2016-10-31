@@ -1,0 +1,2 @@
+打包celery 镜像
+$sudo docker run -it -v /home/cimer/615/PressureTesting:/home/user -e CELERY_BROKER_URL=rabbitmq://guest@172.17.0.2 celery:725 /usr/local/bin/celery -A pressure worker -Q Finish

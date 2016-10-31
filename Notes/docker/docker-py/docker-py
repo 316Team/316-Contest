@@ -1,0 +1,17 @@
+在安装 docker-py 之前可以先安装 ipython 工具
+Ipython 是 Python 的交互式 Shell ，提供了代码自动补全，自动缩进，高亮显示，执行 Shell 命令等非常有用的特性。
+Linux 系统可以直接通过系统的软件包管理器安装。
+$sudo apt-get install ipython
+
+同样， docker-py 也可以直接通过命令安装。
+$sudo pip install docker-py
+
+如果安装时提示没有 pip ，则先安装 pip 。
+$sudo apt-get install python-pip python-dev build-essential
+然后再安装docker-py
+$sudo pip install docker-py
+启动远程socket
+$sudo vim /etc/default/docker           #在末尾添加
+DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
+
+
