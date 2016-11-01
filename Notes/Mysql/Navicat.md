@@ -1,6 +1,6 @@
 # Navicat 激活
 
-- 下载 Navicat 11 for Windows 注册机 [navicat注册机](http://172.16.4.111:8000/bianl/Basic_Virtual/blob/dev/huful/Notes/Mysql/navicat注册机.7z)
+- 下载 Navicat 11 for Windows 注册机 [navicat注册机](https://github.com/316Team/316-Contest/blob/316Team/Notes/Mysql/navicat注册机.7z)
 
 - 使用管理员权限运行注册机<br>
 
