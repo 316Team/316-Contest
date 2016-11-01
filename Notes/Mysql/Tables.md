@@ -51,3 +51,9 @@ mysql>truncate table table_name;
 mysql>update TABLE_NAME set id=1 where uuid=666;
 # 更新 TABLE_NAME 数据表中的 id=1 的 uuid 字段的 value 值为 666
 ```
+
+- 给root用户权限
+
+```
+mysql>grant all privileges on *.* to 'root'@'%' identified by
+```
