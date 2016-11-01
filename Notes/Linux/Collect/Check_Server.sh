@@ -8,7 +8,7 @@ if [[ "$result" != "" ]];then
 else
     echo "Not Running"
     tail -f /var/log/faillog &
-   # 需重启的服务
+# 需重启的服务
 fi
 # 用法: ./scan.sh 需要检查的服务内容
 # 如：ps -ef | grep tail

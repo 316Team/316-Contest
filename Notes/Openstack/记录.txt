@@ -1,5 +1,0 @@
-KVM 创建qcow2镜像：
-CentOS 命令行版本 实现 root 自动登录
-vi /etc/systemd/system/getty.target.wants/getty\@tty1.service
-找到 ExecStart项
-添加 --autologin root即可。

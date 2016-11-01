@@ -1,3 +1,5 @@
+# Linux 下的一些使用经验
+
 - 删除开头带有横杠的文件，如：-name(文件名)
 
 ```
@@ -35,27 +37,27 @@ $sudo docker inspect CONTAINER_NAME | jq .[0].NetworkSettings.Gateway
 
 - 安装更新时，出现 W: GPG error: http://ppa.launchpad.net trusty InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 93C4A3FD7BB9C367
  错误：
- 
- ```
- $sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
- $sudo apt-get clean
- $sudo apt-get update
- ```
- 
- - 将指定的 IP 从 known_hosts 中删除 
- 
- ```
- $ssh-keygen -f /home/xxoo/.ssh/known_hosts -R 172.17.0.2
- ```
- 
- - 查看端口信息
- 
- ```
- $netstat -natp
- ```
- 
- - ssh ubuntu系统，一直出现 Permission denied, please try again. 时，只要修改 /etc/ssh/sshd_config 文件就行
- 
+
+```
+$sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+$sudo apt-get clean
+$sudo apt-get update
+```
+
+- 将指定的 IP 从 known_hosts 中删除
+
+```
+$ssh-keygen -f /home/xxoo/.ssh/known_hosts -R 172.17.0.2
+```
+
+- 查看端口信息
+
+```
+$netstat -natp
+```
+
+- ssh ubuntu系统，一直出现 Permission denied, please try again. 时，只要修改 /etc/ssh/sshd_config 文件就行
+
 ```
 $sudo vim /etc/ssh/sshd_config
  PermitRootLogin yes  //添加在任意位置
@@ -147,7 +149,7 @@ $python -c "import platform; print platform.node()"
 
 - 权限进制之间的转换
 
-> r=4，w=2，x=1 
+> r=4，w=2，x=1
 
 - scp 断点续传
 

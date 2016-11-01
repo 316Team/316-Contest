@@ -14,8 +14,8 @@ Storing debug log for failure in /home/cimer/.pip/pip.log
 $sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 $sudo apt-get build-dep gcc
 $sudo pip install pycrypto
-$sudo pip install paramiko                                              #如果这里安装出错，则使用下面的地址来安装
-$sudo pip install paramiko -i http://pypi.douban.com/simple             #这里的 -i 是指定安装的源地址
+$sudo pip install paramiko                                              // 如果这里安装出错，则使用下面的地址来安装
+$sudo pip install paramiko -i http://pypi.douban.com/simple             // 这里的 -i 是指定安装的源地址
 ```
 
 # python 建立SSH 连接

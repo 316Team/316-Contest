@@ -7,10 +7,10 @@ Name：PEP8<br>
 Program：pep8<br>
 Parameters：$FilePath$<br>
 Working directory：$ProjectFileDir$<br>
-![](http://172.16.4.111:8000/bianl/Basic_Virtual/raw/dev/huful/image/PEP8-1.png)
+![](https://github.com/316Team/316-Contest/tree/316Team/image/PEP8-1.png)
 Output Filters==>添加  + 。<br>
 Regular expression to match output：$FILE_PATH$\:$LINE$\:$COLUMN$\:.*
-![](http://172.16.4.111:8000/bianl/Basic_Virtual/raw/dev/huful/image/PEP8-2.png)
+![](https://github.com/316Team/316-Contest/tree/316Team/image/PEP8-2.png)
 <br>
 如果Pycharm 开启后，一直出现 Updating Indices，点击 file-->invalidate caches/restart-->invalidate and restart<br>
 

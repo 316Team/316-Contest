@@ -1,6 +1,6 @@
-安装 Mysqldb for python：
+# 安装一些Linux下的软件
 
-- 直接用 apt-get 安装
+- 安装 Mysqldb for python：直接用 apt-get 安装
 
 ```
 sudo apt-get install python-mysqldb

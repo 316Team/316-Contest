@@ -181,15 +181,15 @@ $sudo curl https://<YOUR_USERNAME>:<YOUR_PASSWORD>@[YOUR-DOMAIN]/v2/
 - Accessing Your Docker Registry from a Client
 
 ```
-$sudo cat /docker-registry/nginx/devdockerCA.crt                                #将显示出来的证书拷贝
-$sudo mkdir /usr/local/share/ca-certificates/docker-dev-cert                    #在测试机上进行操作
-$sudo vim /usr/local/share/ca-certificates/docker-dev-cert/devdockerCA.crt      #将拷贝的证书粘贴进去
-$cat /usr/local/share/ca-certificates/docker-dev-cert/devdockerCA.crt           #查看一下证书
+$sudo cat /docker-registry/nginx/devdockerCA.crt                                // 将显示出来的证书拷贝
+$sudo mkdir /usr/local/share/ca-certificates/docker-dev-cert                    // 在测试机上进行操作
+$sudo vim /usr/local/share/ca-certificates/docker-dev-cert/devdockerCA.crt      // 将拷贝的证书粘贴进去
+$cat /usr/local/share/ca-certificates/docker-dev-cert/devdockerCA.crt           // 查看一下证书
 $sudo vim /etc/default/docker
 #添加内容        DOCKER_OPTS="--registry-mirror=https://YOURDOMAIN"
 $sudo vim /etc/hosts
 #添加内容        YOUR_REGISTRY_HOST_IP       YOUR_REGISTRY_DOMAIN
-$sudo update-ca-certificates                                                    #更新证书
+$sudo update-ca-certificates                                                    // 更新证书
 $sudo service docker restart
 $sudo docker login https://YOUR_REGISTRY_DOMAIN
 $sudo docker tag test-image [YOUR_REGISTRY_DOMAIN]/test-image

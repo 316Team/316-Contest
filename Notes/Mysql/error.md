@@ -1,10 +1,10 @@
 2016-07-08：
 
-![](http://172.16.4.111:8000/bianl/Basic_Virtual/raw/dev/huful/image/Mysql-error-1.png)
+![](https://github.com/316Team/316-Contest/tree/316Team/image/Mysql-error-1.png)
 
 当有多个timestamp时，会导致default问题：
 
-![](http://172.16.4.111:8000/bianl/Basic_Virtual/raw/dev/huful/image/Mysql-error-2.png)
+![](https://github.com/316Team/316-Contest/tree/316Team/image/Mysql-error-2.png)
 
 只要将其改为：
 

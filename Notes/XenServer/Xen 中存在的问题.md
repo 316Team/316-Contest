@@ -10,7 +10,7 @@
 > 上面的uuid 是 pif-list 获取的 uuid 号，ip 地址可以改成自己想要的ip
 
 - NIC 未与 主机连接：<br>
-![](http://172.16.4.111:8000/bianl/Basic_Virtual/raw/dev/huful/image/XenServer_Disconnected.png)<br>
+![](https://github.com/316Team/316-Contest/tree/316Team/image/XenServer_Disconnected.png)<br>
 
 - 在 XenCenter 本地 Shell 中开启端口：
 
