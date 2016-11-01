@@ -55,5 +55,5 @@ mysql>update TABLE_NAME set id=1 where uuid=666;
 - 给root用户权限
 
 ```
-mysql>grant all privileges on *.* to 'root'@'%' identified by
+mysql>grant all privileges on *.* to 'root'@'%' identified by 'Password';
 ```
