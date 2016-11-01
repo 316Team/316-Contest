@@ -1,6 +1,6 @@
 如果在启动 Ipython 的时候出现如下错误：
 
-![](http://172.16.4.111:8000/bianl/Basic_Virtual/raw/dev/huful/image/Ipython.png)<br>
+![](https://github.com/316Team/316-Contest/blob/316Team/image/Ipython.png)<br>
 极大的可能是因为当前目录不是用户目录，只要进入/home/username 目录就能正常启动 Ipython 了
 
 ## 命令行下输入 Ipython 进入 Ipython 下
