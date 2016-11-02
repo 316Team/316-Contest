@@ -14,6 +14,6 @@
 
 - 在 XenCenter 本地 Shell 中开启端口：
 
-```
-#ifconfig eth* up
-```
+``#ifconfig eth* up``
+
+> XenServer 虚拟机启不来，可能是主机的虚拟化没有开

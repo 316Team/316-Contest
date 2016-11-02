@@ -2,9 +2,7 @@
 
 - 删除开头带有横杠的文件，如：-name(文件名)
 
-```
-$sudo rm -rf -- -name
-```
+`$sudo rm -rf -- -name`
 
 - 删除带有其他特殊字符的文件：
 
@@ -46,15 +44,11 @@ $sudo apt-get update
 
 - 将指定的 IP 从 known_hosts 中删除
 
-```
-$ssh-keygen -f /home/xxoo/.ssh/known_hosts -R 172.17.0.2
-```
+`$ssh-keygen -f /home/xxoo/.ssh/known_hosts -R 172.17.0.2`
 
 - 查看端口信息
 
-```
-$netstat -natp
-```
+`$netstat -natp`
 
 - ssh ubuntu系统，一直出现 Permission denied, please try again. 时，只要修改 /etc/ssh/sshd_config 文件就行
 
@@ -83,69 +77,47 @@ SHELL = /bin/bash
 
 - 查看cpu的信息
 
-```
-$lscpu
-```
+`$lscpu`
 
 - 查看打开端口的程序
 
-```
-$lsof -Pan -i tcp -i udp
-```
+`$lsof -Pan -i tcp -i udp`
 
 - 进程树
 
-```
-$pstree -p
-```
+`$pstree -p`
 
 - 显示/usr/bin 目录下的文件的用途
 
-```
-$ls /usr/bin | xargs whatis | grep -v nothing | less
-```
+`$ls /usr/bin | xargs whatis | grep -v nothing | less`
 
 - 列出大文件和目录
 
-```
-$du -h | grep -P "^\S*G"
-```
+`$du -h | grep -P "^\S*G"`
 
 - 查看指定文件夹大小
 
-```
-$du -sh DIC_NAME
-```
+`$du -sh DIC_NAME`
 
 - 获取 IP 地址
 
-```
-$ip -o -4 addr show |awk -F '[ /]' '/global/ {print $4}'
-```
+`$ip -o -4 addr show |awk -F '[ /]' '/global/ {print $4}'`
 
 - 按cpu利用率ps 排序
 
-```
-$ps -e -o pcpu,cpu,nice,state,cputime,args --sort pcpu | sed "/^ 0.0 /d"
-```
+`$ps -e -o pcpu,cpu,nice,state,cputime,args --sort pcpu | sed "/^ 0.0 /d"`
 
 - 比较两个目录下的同名文件
 
-```
-$diff {$path 1,$path2}/file_to_diff
-```
+`$diff {$path 1,$path2}/file_to_diff`
 
 - 从文件中提取ip 地址
 
-```
-$grep -Eo \([0-9]\{1,3\}[\.]\)\{3\}[0-9] file_name | sort | uniq
-```
+`$grep -Eo \([0-9]\{1,3\}[\.]\)\{3\}[0-9] file_name | sort | uniq`
 
 - shell 下使用python 打印 HOSTNAME
 
-```
-$python -c "import platform; print platform.node()"
-```
+`$python -c "import platform; print platform.node()"`
 
 - 权限进制之间的转换
 
@@ -153,9 +125,7 @@ $python -c "import platform; print platform.node()"
 
 - scp 断点续传
 
-```
-$rsync -P --rsh=ssh home.tar 192.168.0.34:/home/home.tar
-```
+`$rsync -P --rsh=ssh home.tar 192.168.0.34:/home/home.tar`
 
 - 后台运行
 
@@ -166,15 +136,11 @@ $bg BACKSTAGE
 
 - 查看后台运行的程序
 
-```
-$jobs
-```
+`$jobs`
 
 - 将后台程序放到前台执行
 
-```
-$fg BACKSTAGE
-```
+`$fg BACKSTAGE`
 
 - 将程序添加到启动器
 
