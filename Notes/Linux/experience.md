@@ -156,3 +156,9 @@ Icon=/xxx/pycharm-community-3.4.1/bin/pycharm.png
 Terminal=pycharm
 Categories=Pycharm;
 ```
+
+- 本地文件夹同步
+
+`$rsync -auvrtzopgP --progress /root/ /tmp/root_back/`
+
+// 删除root 下的文件不会同步删除/tmp/root_back/，除非加入 `--delete` 选项
