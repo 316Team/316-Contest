@@ -35,6 +35,12 @@ deb https://apt.dockerproject.org/repo ubuntu-precise main
 deb https://apt.dockerproject.org/repo ubuntu-trusty main
 ```
 
+- 16.04
+
+```
+deb https://apt.dockerproject.org/repo ubuntu-xenial main
+```
+
 - 更新系统
 
 ```
