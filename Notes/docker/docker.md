@@ -120,6 +120,8 @@ $docker-compose --version
 docker-compose version: 1.8.0
 ```
 
+如需最新版本详见 [版本地址](https://github.com/docker/compose/releases)
+
 ```
 $sudo pip install docker-compose
 ```

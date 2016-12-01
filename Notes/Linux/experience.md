@@ -158,9 +158,10 @@ Categories=Pycharm;
 
 - 本地文件夹同步
 
-`$rsync -auvrtzopgP --progress /root/ /tmp/root_back/`
-
+```
+$rsync -auvrtzopgP --progress /root/ /tmp/root_back/
 // 删除root 下的文件不会同步删除/tmp/root_back/，除非加入 `--delete` 选项
+```
 
 - Linux 下载百度云资源的方法
 
@@ -265,3 +266,7 @@ E: 部分索引文件下载失败。如果忽略它们，那将转而使用旧�
 ```
 $sudo rm -rf /var/lib/apt/lists
 ```
+
+- 查看程序占用端口
+
+`lsof -i:PORT`

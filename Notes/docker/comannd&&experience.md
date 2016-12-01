@@ -83,3 +83,6 @@ $sudo docker logs $(sudo docker ps -lq)
 
 > 使用 Docker 命令需要 root 权限，如果把当前用户加入 Docker 用户组，就可以直接运行 Docker命令了。通过编辑 /etc/group 文件，直接将用户名写在 docker 那一行后面即可。或者通过 $sudo gpasswd -a MY_USER_NAME docker 命令添加相应用户到 Docker 用户组。完成后，用户需要重新登录使之生效。<br>
 
+- 将容器设为与宿主机同时启动
+
+`sudo docker run -d --restart=always DOCKER_IMAGE`

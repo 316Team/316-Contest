@@ -20,3 +20,7 @@
 #### 0x5 创建ISO存储： `xe sr-create name-label=ISOs type=iso device-config:location=/opt/iso/ ISOs device-config:legacy_mode=true content-type=iso`
 
 #### 0x6 完成： 在xen客户端会出现ISO存储，把镜像上传到/opt/iso，刷新ISO后即可在ISO存储中看到上传的镜像
+
+- 安装 xen-tools
+
+> 点击安装 `xen-tools`，或者在 `Console` 下的 `DVD Driver1:` 直接挂载 `guest-tools.iso` 盘，进入需要装 `xen-tools` 的虚拟机，挂载镜像到 `/mnt`，`sudo mount /dev/sr0 /mnt`（这里不一定是``），然后直接安装 `sudo /mnt/Linux/install.sh`，安装结束重启一下就好了。
