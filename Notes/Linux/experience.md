@@ -209,7 +209,7 @@ xterm*|rxvt*)
 $sudo echo "touch lala.txt" > run.sh
 $sudo cp run.sh /etc/init.d/
 $cd /etc/init.d
-$sudo chmod 755 /etc/init.d/run.#!/bin/sh
+$sudo chmod 755 /etc/init.d/run.sh
 $sudo update-rc.d run.sh defaults
 ```
 
