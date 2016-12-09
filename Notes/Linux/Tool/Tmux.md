@@ -2,7 +2,7 @@
 
 - 安装：
 
-```
+```bash
 $sudo apt-get install tmux
 ```
 
@@ -10,8 +10,8 @@ $sudo apt-get install tmux
 
 ```
 $tmux
-Ctrl+b "    创建横向切割窗口
-Ctrl+b %    创建纵向切割窗口
+    Ctrl+b "    创建横向切割窗口
+    Ctrl+b %    创建纵向切割窗口
 ```
 
 - 删除当前分屏

@@ -223,7 +223,7 @@ $sudo vim run.sh
     #description: This is server description
     #processname: Your_server_name
     echo "lalal" > lalal.txt
-$sudo chmod u+x run.#!/bin/sh
+$sudo chmod u+x run.sh
 $sudo chkconfig --add run.sh
 ```
 

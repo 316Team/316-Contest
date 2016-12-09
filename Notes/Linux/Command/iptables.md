@@ -56,3 +56,10 @@ $sudo iptables -t nat -D POSTROUTING NUMBER
 > $sudo iptables -t nat -A PREROUTING  -d 192.168.1.152 -i eth0 -p tcp --dport 9999 -j DNAT --to-destination 172.16.2.208:80
 > $sudo iptables -t nat -A POSTROUTING -d 172.16.2.208/32 -p tcp --dport 80 -j MASQUERADE
 > ```
+
+- 保存`iptables`规则
+
+> centos
+> ```bash
+> #/sbin/service iptables save
+> ```

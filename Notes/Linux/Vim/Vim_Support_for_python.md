@@ -6,12 +6,12 @@
 ## 0x2
 - 安装 `vim-nox-py2`
 
-```
+```bash
 $sudo apt-get install vim-nox-py2
 ```
 - 如果还是没有 `+python`则需要手动切换
 
-```
+```bash
 $sudo update-alternatives --config vim
 ```
 
