@@ -270,3 +270,14 @@ $sudo rm -rf /var/lib/apt/lists
 - 查看程序占用端口
 
 `lsof -i:PORT`
+
+- 两个文件合并去重
+
+> 1.取出两个文件的并集（重复的行只保留一份）<br>
+> 2.取出两个文件的交集（只留下同事存在于两个文件中的文件）<br>
+> 3.删除交集，留下其他的行<br>
+> ```bash
+> $cat file1 file2 | sort | uniq > file3
+> $cat file1 file2 | sort | uniq -d > file3
+> $cat file1 file2 | sort | uniq -u > file3
+> ```

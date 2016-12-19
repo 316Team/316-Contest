@@ -26,9 +26,7 @@ $sudo vim /etc/apt/source.list.d/docker.list
 - 12.04
 
 ```
-deb https://apt.dockerproject.org/repo ubuntu-precise main
-```
-
+deb https://apt.dockerproject.opeizhi
 - 14.04
 
 ```
