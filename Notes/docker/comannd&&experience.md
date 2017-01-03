@@ -26,7 +26,7 @@ $sudo docker build --rm=false IMAGE_NAME:TAG
 
 - 将查看容器ip做成脚本
 
-```
+```bash
 #!/bin/bash
 
 exec sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"

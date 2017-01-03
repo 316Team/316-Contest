@@ -198,7 +198,7 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \W\a\]$PS1"
-    ;;  
+    ;;
 *)
 ```
 
@@ -256,10 +256,10 @@ $sudo rm -rf /var/lib/apt/lists/lock
 报错信息
 错误:65 http://101.96.10.64/archive.getdeb.net/ubuntu xenial-getdeb/apps amd64 Packages
   Hash 校验和不符
-已下载 53.1 MB，耗时 53秒 (985 kB/s)                  
+已下载 53.1 MB，耗时 53秒 (985 kB/s)
 正在读取软件包列表... 完成
 E: 无法下载 http://101.96.10.64/archive.getdeb.net/ubuntu/dists/xenial-getdeb/apps/binary-amd64/Packages.bz2  Hash 校验和不符
-E: 无法下载 http://101.96.10.64/archive.getdeb.net/ubuntu/dists/xenial-getdeb/apps/binary-i386/Packages.bz2  
+E: 无法下载 http://101.96.10.64/archive.getdeb.net/ubuntu/dists/xenial-getdeb/apps/binary-i386/Packages.bz2
 E: 部分索引文件下载失败。如果忽略它们，那将转而使用旧的索引文件。
 ```
 

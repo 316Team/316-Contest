@@ -3,7 +3,7 @@
 # Github 的使用
 
 ```bash
-$ssh-keygen -t rsa -C "1028831173@qq.com" // 自己的邮箱地址
+$ssh-keygen -t rsa -C "xxxxxxxxxx@qq.com" // 自己的邮箱地址
 // 获取公钥 id_rsa.pub
 // 在Github个人设置中将 id_rsa.pub 的内容粘贴到 ssh-key 中
 // 创建一个文件夹用来存放远端仓库
