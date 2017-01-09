@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ps_out=`ps -ef | grep $1 | grep -v 'grep' | grep -v $0`
 # 单独打印出需要检查的服务
 result=$(echo ${ps_out} | grep "$1")

@@ -8,6 +8,6 @@ grep -E "aaa|bbb"
 
 - 打印除某字符外的字符串
 
-```
-grep -Pv `(img|qcow2)$`
+```bash
+$grep -Pv `(img|qcow2)$` FILE_NAME
 ```
