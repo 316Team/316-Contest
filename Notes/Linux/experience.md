@@ -281,3 +281,9 @@ $sudo rm -rf /var/lib/apt/lists
 > $cat file1 file2 | sort | uniq -d > file3
 > $cat file1 file2 | sort | uniq -u > file3
 > ```
+
+- 查找目录下的所有文件中是否含有某个字符串,并且只打印出文件名
+
+```bash
+$find . | xargs grep -ri "WORD" -l
+```
