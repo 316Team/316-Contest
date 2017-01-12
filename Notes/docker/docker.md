@@ -24,23 +24,23 @@ $sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 5
 $sudo vim /etc/apt/source.list.d/docker.list
 ```
 
-- `12.04`
+> `12.04`
 
-```
-deb https://apt.dockerproject.opeizhi
-```
+>```
+>deb https://apt.dockerproject.opeizhi
+>```
 
-- `14.04`
+> `14.04`
 
-```
-deb https://apt.dockerproject.org/repo ubuntu-trusty main
-```
+>```
+>deb https://apt.dockerproject.org/repo ubuntu-trusty main
+>```
 
-- `16.04`
+> `16.04`
 
-```
-deb https://apt.dockerproject.org/repo ubuntu-xenial main
-```
+>```
+>deb https://apt.dockerproject.org/repo ubuntu-xenial main
+>```
 
 - 更新系统
 
