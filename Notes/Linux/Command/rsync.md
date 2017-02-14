@@ -14,3 +14,20 @@ $rsync -auvrtzopgP --progress /root/ /tmp/root_back/
 ```
 $rsync -P --append FILE1 FILE2
 ```
+
+- 排除文件或目录
+
+> 如果文件或目录较多，可以以文件的形式<CR>
+> 创建需排除的目录和文件的文件<CR>
+> 列表如下<CR>
+```
+$cat excluded
+/dev/*
+/proc/*
+/sys/*
+/tmp/*
+/media/*
+```
+> 然后运行命令`$sudo rsync -aAXhv --exclude-from=excluded / /mnt/backup`
+
+> 也可以直接从命令行排除文件或目录`$sudo rsync -aAXhv --exclude={"/var/cache","/var/tmp"} /var /home/adrian/var`
