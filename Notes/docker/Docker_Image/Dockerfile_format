@@ -1,0 +1,37 @@
+Dockerfile 文件基本规范
+
+采用注释的方式：
+##################################################################################################################
+## 镜像名： NAME_TIME:TAG {oa_201610103:V1}
+## 标注 容器内有什么样的漏洞 漏洞级别：
+## {存在git 泄漏，中危漏洞
+## 存在弱口令，低危漏洞
+## .DS_store 泄漏，低危漏洞}
+##
+## payload值的基本信息
+## payload:
+##   {oa: /ranzhi/www/sys/misc-ping-.html
+##        /ranzhi/www/sys/entry-printBlock-1.html
+##        /ranzhi/oa/22/.git/config
+##        /ranzhi/oa/22/.git
+##        /ranzhi/oa/22/.DS_Store}
+##
+##   镜像环境信息（包含前台后台登录地址以及用户名密码）：
+##   oa系统: USER_NAME : admin
+##          PASSWORD : 123456
+##   oa系统的访问地址：HOST_IP:PORT/ranzhi/www/
+##
+##   Dockerfile命名方式：
+##          Dockerfile_NAME_TIME_TAG  {Dockerfile_oa_20160103_V1}
+##   Docker 的版本:
+##          Version: 1.0.1
+##   创建和维护者信息：
+##          NAME "E-MAIL" {真实姓名 “zishuheou@163.com”}
+##          E-MAIL 可自行决定
+##   日志存储位置：
+##          VOLUME ["/var/log","/home/logs/SERVER_NAME/access/","/home/logs/SERVER_NAME/error/"]
+##################################################################################################################
+
+FROM Ubuntu:14.04
+
+EXPOSE 80 3306

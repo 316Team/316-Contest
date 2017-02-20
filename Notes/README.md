@@ -25,3 +25,5 @@
 - [李权洲（github）运维实例手册](https://github.com/liquanzhou/ops_doc)
 
 - [MoeLove](http://moelove.info/)
+
+- [plum's blog](https://plumz.me/)
