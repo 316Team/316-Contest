@@ -17,7 +17,7 @@ $git pull orgin 316Team                   // 拉取远程仓库的更新到本�
 $git clone https://github.com/316Team/316-Contest
 $git add *                                // 添加所有文件
 $git commit -m "update"                   // 为添加的文件打上 "update" 这个标签
-$git push orgin 316Team                   // 上传本地仓库到远程仓库
+$git push -u orgin 316Team                   // 上传本地仓库到远程仓库
 ```
 
 - [廖雪峰Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
