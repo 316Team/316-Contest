@@ -181,7 +181,8 @@ $sudo curl https://<YOUR_USERNAME>:<YOUR_PASSWORD>@[YOUR-DOMAIN]/v2/
 - Accessing Your Docker Registry from a Client
 
 ```
-$sudo cat /docker-registry/nginx/devdockerCA.crt                                // 将显示出来的证书拷贝
+$sudo cat /docker-registry/nginx/devdockerCA.crt                                // 在远程仓库将显示出来的证书拷贝
+		####一下内容都在测试机上进行####
 $sudo mkdir /usr/local/share/ca-certificates/docker-dev-cert                    // 在测试机上进行操作
 $sudo vim /usr/local/share/ca-certificates/docker-dev-cert/devdockerCA.crt      // 将拷贝的证书粘贴进去
 $cat /usr/local/share/ca-certificates/docker-dev-cert/devdockerCA.crt           // 查看一下证书
