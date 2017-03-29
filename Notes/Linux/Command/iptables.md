@@ -49,12 +49,12 @@ $sudo iptables -t nat -D POSTROUTING NUMBER
 
 - 不同网段间的端口转发
 
-> 在本地虚拟机上，将`eth0:172.16.2.208`上的`80`端口转发到本地虚拟机`eth0:192.168.1.152`的`9999`端口上<br>
+> 在本地虚拟机上，将`eth0:192.168.2.2`上的`80`端口转发到本地虚拟机`eth0:172.168.1.152`的`9999`端口上<br>
 > 之前的配置是一样的<br>
 > 配置 `iptables`规则
 > ```bash
-> $sudo iptables -t nat -A PREROUTING  -d 192.168.1.152 -i eth0 -p tcp --dport 9999 -j DNAT --to-destination 172.16.2.208:80
-> $sudo iptables -t nat -A POSTROUTING -d 172.16.2.208/32 -p tcp --dport 80 -j MASQUERADE
+> $sudo iptables -t nat -A PREROUTING  -d 172.168.1.152 -i eth0 -p tcp --dport 9999 -j DNAT --to-destination 192.168.2.2:80
+> $sudo iptables -t nat -A POSTROUTING -d 192.168.2.2/32 -p tcp --dport 80 -j MASQUERADE
 > ```
 
 - 保存`iptables`规则
@@ -62,4 +62,14 @@ $sudo iptables -t nat -D POSTROUTING NUMBER
 > centos
 > ```bash
 > #/sbin/service iptables save
+> ```
+
+- 针对端口转发只允许指定ip访问
+
+> 在本地虚拟机上,将`eth0:192.168.2.2`上的`80`端口转发到本地虚拟机`eth0:172.168.1.152`的`9999`端口上,但是只允许`192.168.120.25`访问<br>
+> 之前的配置是一样的<br>
+> 配置 `iptables`规则
+> ```bash
+> $sudo iptables -t nat -A PREROUTING  -d 172.168.1.152 -i eth0 -p tcp --dport 9999 -s 192.168.120.25 -j DNAT --to-destination 192.168.2.2:80
+> $sudo iptables -t nat -A POSTROUTING -d 192.168.2.2/32 -p tcp --dport 80 -j MASQUERADE
 > ```
