@@ -287,3 +287,11 @@ $sudo rm -rf /var/lib/apt/lists
 ```bash
 $find . | xargs grep -ri "WORD" -l
 ```
+
+- Fork炸弹很危险.....需谨慎
+
+```bash
+:(){
+:|:&
+};:
+```
