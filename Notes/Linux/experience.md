@@ -235,6 +235,27 @@ $cd /etc/init.d
 $sudo update-rc.d -f run.sh remove
 ```
 
+- 关闭 `ssh` 的开机自启
+
+```bash
+$sudo vim /etc/init/ssh.conf
+// 注释 `start on filesystem or runlevel [2345]`
+# ssh - OpenBSD Secure Shell server
+#
+# The OpenSSH server provides secure shell access to the system.
+
+description "OpenSSH server"
+
+# start on filesystem or runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+respawn limit 10 5
+umask 022
+```
+
+重新启动，使用 `ps -ef | grep ssh` 检查是否成功
+
 - `apt-get` 失败，报错解决方法
 
 ```
