@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-ADD sources.list /etc/apt/sources.list
+COPY sources.list /etc/apt/sources.list
 
 RUN buildDeps='curl git ipython openssh-server python python-dev python-pip vim tmux' \
 	&& set -x \
@@ -18,7 +18,7 @@ RUN buildDeps='curl git ipython openssh-server python python-dev python-pip vim 
         && echo '#!/bin/bash\n/usr/sbin/sshd -D' > /root/run.sh \
         && chmod u+x /root/run.sh
 
-ADD authorized_keys /root/.ssh/authorized_keys
+COPY authorized_keys /root/.ssh/authorized_keys
 
 EXPOSE 22 80
 

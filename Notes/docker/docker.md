@@ -1,114 +1,118 @@
 # Docker 安装
 
-## ubuntu版本的安装
+[TOC]
 
-- 首先，检查一下系统的内核版本：
+## 1. ubuntu版本的安装
+
+### 1.1 首先，检查一下系统的内核版本：
 
 ```bash
 $sudo uname -r
 ```
 
-> 内核版本要大于`3.10`
+​	内核版本要大于`3.10`
 
-- 升级系统
+### 1.2 升级系统
 
 ```bash
 $sudo apt-get update
 $sudo apt-get install apt-transport-https ca-certificates
 ```
 
-- 添加新的`GPG key`
+### 1.3 添加新的GPG key
 
 ```bash
 $sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 $sudo vim /etc/apt/source.list.d/docker.list
 ```
 
-> `12.04`
+### 1.4 根据对应版本，添加仓库源
 
->```
->deb https://apt.dockerproject.opeizhi
->```
+​	`12.04`
 
-> `14.04`
+```bash
+deb https://apt.dockerproject.opeizhi
+```
 
->```
->deb https://apt.dockerproject.org/repo ubuntu-trusty main
->```
+​	`14.04`
 
-> `16.04`
+```bash
+deb https://apt.dockerproject.org/repo ubuntu-trusty main
+```
 
->```
->deb https://apt.dockerproject.org/repo ubuntu-xenial main
->```
+​	`16.04`
 
-- 更新系统
+```bash
+deb https://apt.dockerproject.org/repo ubuntu-xenial main
+```
+
+### 1.5 更新系统
 
 ```bash
 $sudo apt-get update
 ```
 
-- 清除老的`repo`
+### 1.6 清除老的repo
 
 ```bash
 $sudo apt-get purge lxc-docker
 ```
 
-- 检查apt
+### 1.7 检查缓存
 
 ```bash
 $sudo apt-cache policy docker-engine
 ```
 
-- 更新系统
+### 1.8 更新系统
 
 ```bash
 $sudo apt-get update
 ```
 
-- 安装推荐包
+### 1.9 安装推荐包
 
 ```bash
 $sudo apt-get install linux-image-extra-$(uname -r)
 ```
 
-- 更新系统
+### 1.10更新系统
 
 ```bash
 $sudo apt-get update
 ```
 
-- 安装`Docker`
+### 1.11 安装Docker
 
 ```bash
 $sudo apt-get install docker-engine
 ```
 
-- 开启`Docker`服务
+### 1.12 开启Docker服务
 
 ```bash
 $sudo service docker start
 ```
 
-- 验证安装
+### 1.13 验证安装
 
 ```bash
 $sudo docker run hello-world
 ```
 
-- 创建`Docker`用户组
+### 1.14 创建Docker用户组
 
 ```bash
 $sudo groupadd docker
 ```
 
-- 追加用户到`Docker`用户组
+### 1.15 追加用户到Docker用户组
 
 ```bash
 $sudo usermod -aG docker ubuntu
 ```
 
-## CentOS版本的安装
+## 2. CentOS版本的安装
 
 - 同`Ubuntu`版本一样，先检查内核版本，且必须要大于`3.10`
 
@@ -202,7 +206,7 @@ $sudo systemctl enable docker
 
 *********************
 
-### 卸载`Docker`
+### 卸载Docker
 
 - 查看安装`Docker`的安装包列表
 
@@ -220,7 +224,7 @@ $sudo yum -y remove docker-engine.x86_64
 $sudo yum -y remove docker-engine-selinux.noarch
 ```
 
-> 该命令并不会移除在主机上的镜像、容器、卷和用户创建的配置文件
+该命令并不会移除在主机上的镜像、容器、卷和用户创建的配置文件
 
 - 删除所有的镜像、容器和卷
 
@@ -232,7 +236,7 @@ $sudo rm -rf /var/lib/docker
 
 *********************
 
-> 详情请看Docker [官方文档](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
+详情请看Docker [官方文档](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
 
 # docker-compose
 
@@ -245,7 +249,7 @@ $docker-compose --version
 docker-compose version: 1.8.0
 ```
 
-> 如需最新版本详见 [版本地址](https://github.com/docker/compose/releases)
+如需最新版本详见 [版本地址](https://github.com/docker/compose/releases)
 
 ```bash
 $sudo pip install docker-compose

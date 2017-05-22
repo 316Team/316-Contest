@@ -235,3 +235,42 @@ Get https://172.16.2.29:5000/v1/_ping: http: server gave HTTP response to HTTPS 
 $sudo vim /etc/default/docker
 DOCKER_OPTS="--insecure-registry=172.16.2.29:5000"
 ```
+
+## 删除 registry 下的镜像
+1. 首先移出`/DOCKER_REGISTRY_PATH/data/docker/registry/v2/repositories/IMAGE_NAME`
+    - Example:
+    ```bash
+    $ mv /docker-registry/data/docker/registry/v2/repositories/shell_20160202/ /home/shell
+    ```
+
+2. 其次，从移出的目录内得到`blobs`,并写入`blobs.txt`
+    - Example:
+    ```bash
+    $ ls /home/shell/shell_20160202/_layers/sha256/ > blobs.txt
+    ```
+
+3. 开始写`shell`脚本
+
+    - Example:
+
+      ```bash
+      #!/bin/bash
+      # cat blobs.txt 需要 blobs.txt 的绝对路径
+      # /home/shell/blobs/ 为目的目录，可以任意指定
+      cat blobs.txt | while read line
+      do
+      	cd /docker-registry/data/docker/registry/v2/blobs/sha256
+      	path=$(find . -name $line)
+      	mv $path /home/shell/blobs/
+      done
+      ```
+
+4. 全部移出后，可直接删除`/home/shell`目录
+
+    - Example:
+
+      ```bash
+      $ sudo rm -rf /home/shell/
+      ```
+
+      ​
