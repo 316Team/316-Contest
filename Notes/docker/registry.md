@@ -319,6 +319,11 @@ DOCKER_OPTS="--insecure-registry=172.16.33.29:5000"
     -I -X HEAD -k https://NAME:PASSWD@www.example.com/v2/IMAGE_NAME/manifests/latest \ 
     | grep Docker-Content-Digest
     Docker-Content-Digest: sha256:9a158aca562b4c1cdcb40834456b6422b630b22daf32680dcf63419f1dcf548c
+    或者使用这种方法，建议使用下面的方法：
+    $ sudo curl -v --silent -H \
+    "Accept: application/vnd.docker.distribution.manifest.v2+json" -X GET -k https://cimer:cimer@www.cimer.com/v2/gv32_20170327/manifests/latest 2>&1 \
+    | grep Docker-Content-Digest | awk '{print $3}'
+    sha256:9a158aca562b4c1cdcb40834456b6422b630b22daf32680dcf63419f1dcf548c
     ```
 
     然后调用`DELETE /v2/<image_name>/manifests/<digest>`来删除镜像
