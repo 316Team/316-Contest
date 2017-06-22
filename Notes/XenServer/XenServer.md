@@ -9,17 +9,11 @@
 
 - 上传ISO镜像的方法：
 
-#### 0x1 查看vg: `vgdisplay`
+#### 0x0 创建挂载目录： `mkdir /opt/iso`
 
-#### 0x2 创建逻辑卷： `lvcreate -L 10GB -n iso VG_XenStorage-21852236-7151-e287-a618-b-2-6aa23846`
+#### 0x1 创建ISO存储： `xe sr-create name-label=ISOs type=iso device-config:location=/opt/iso/ device-config:legacy_mode=true content-type=iso`
 
-#### 0x3 格式化： `mkfs.ext3 /dev/VG_XenStorage-21852236-7151-e287-a618-b0206aa23846/iso`
-
-#### 0x4 创建挂载目录： `mkdir /opt/iso`
-
-#### 0x5 创建ISO存储： `xe sr-create name-label=ISOs type=iso device-config:location=/opt/iso/ ISOs device-config:legacy_mode=true content-type=iso`
-
-#### 0x6 完成： 在xen客户端会出现ISO存储，把镜像上传到/opt/iso，刷新ISO后即可在ISO存储中看到上传的镜像
+#### 0x2 完成： 在xen客户端会出现ISO存储，把镜像上传到/opt/iso，刷新ISO后即可在ISO存储中看到上传的镜像
 
 - 安装 xen-tools
 
