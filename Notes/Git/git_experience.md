@@ -21,3 +21,11 @@ $ git tag -d v1.0
 ```shell
 $ git push -u origin v1.0
 ```
+
+### rm
+
+- 删除本地目录
+
+```shell
+$ git rm -rf DOCUMENT
+```
