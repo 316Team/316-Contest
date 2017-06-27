@@ -11,6 +11,7 @@ $mkdir FOLDER                             // 此文件夹可在任意位置创�
 $git config --global user.name "your Name"
 $git config --global user.email "email@example.com"
 $ssh -T git@github.com                    // 登录 github 测试是否配置正确，正确的提示 successful
+$git remote add origin git@github.com:316Team/316-Contest.git	// 添加远程仓库
 $git pull orgin 316Team                   // 拉取远程仓库的更新到本地仓库
 // 如果 git pull orgin 316Team 拉取不到任何东西，则可以使用克隆到之前所创建的文件夹下
 // 进入到创建好的文件夹下
