@@ -18,3 +18,11 @@
 - 安装 xen-tools
 
 > 点击安装 `xen-tools`，或者在 `Console` 下的 `DVD Driver1:` 直接挂载 `guest-tools.iso` 盘，进入需要装 `xen-tools` 的虚拟机，挂载镜像到 `/mnt`，`sudo mount /dev/sr0 /mnt`（这里不一定是``），然后直接安装 `sudo /mnt/Linux/install.sh`，安装结束重启一下就好了。
+
+- 修改`XenServer`网卡顺序
+  1. 使用`xe pif-forget`掉需要修改的`NIC`
+  2. 使用`xe network-destroy`销毁`NIC`对应的`xenbr`接口
+  3. 修改`/etc/sysconfig/network-scripts/interface-rename-data/dynamic-rules.json`文件，对`lastboot`下的`NIC name`进行修改，并注释掉不用的`OLD`下的`NIC`
+  4. 保存重启`XenServer`
+  5. `xe pif-scan` 扫描本地`NIC`
+  6. `xe pif-list` 检查`NIC`是否正常

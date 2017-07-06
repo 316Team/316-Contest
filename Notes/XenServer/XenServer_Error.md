@@ -16,4 +16,5 @@
 
 ``#ifconfig eth* up``
 
-> XenServer 虚拟机启不来，可能是主机的虚拟化没有开
+> XenServer 虚拟机启不来，可能是主机的虚拟化没有开<br>
+> 当'XenServer'内的'VM'启动时出现'hvm is required for this operation'时，是因为当前设备未开虚拟化
