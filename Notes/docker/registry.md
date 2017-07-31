@@ -341,4 +341,4 @@ DOCKER_OPTS="--insecure-registry=172.16.33.29:5000"
     $ sudo service docker-registry start
     ```
 
-    ​
+<font size=5>[删除私有仓库镜像脚本](https://raw.githubusercontent.com/316Team/316-Contest/316Team/Notes/Linux/Collect/delete_registry_image.sh)</font>
