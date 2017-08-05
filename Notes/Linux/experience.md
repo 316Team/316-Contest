@@ -316,3 +316,36 @@ $find . | xargs grep -ri "WORD" -l
 :|:&
 };:
 ```
+
+- 解除`ubuntu`系统对`home`目录的`ecryptfs`加密
+
+1. 确保数据都已备份
+2. 卸载加密的目录
+
+```shell
+$ ecryptfs-umount-private
+```
+
+3. 恢复对`home`目录的写权限
+
+```bash
+$ sudo chmod u+w /home/$(whoami)
+```
+
+4. 删除`.Prvate`和`.ecryptfs`目录
+
+```shell
+$ rm -rf ~/.Prvate ~/.ecryptfs
+```
+
+5. 卸载加密工具
+
+```shell
+$ sudo apt-get purge ecryptfs-utils libecryptfs0
+```
+
+6. 恢复`skel`
+
+```shell
+$ sudo cp -R /etc/skel/.* /home/$(whoami)
+```

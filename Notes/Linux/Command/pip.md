@@ -21,3 +21,9 @@ $wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate
 $python get-pip.py
 $pip --version  //验证是否安装成功
 ```
+
+- 安装指定版本的python包
+
+```shell
+$ sudo pip install -v celery==3.1.23
+```
