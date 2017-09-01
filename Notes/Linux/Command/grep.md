@@ -23,3 +23,16 @@ $ find . | xargs grep -ri "WORD" -l
 ```bash
 $ grep -Pv "^$|#" FILE_NAME
 ```
+
+- 利用 grep 和 sed 组合，只返回 eth1 的 ip 地址：
+
+```bash
+$ ifconfig eth1 | grep "inet addr" | sed 's/^[^:]*:\([^ ]*\).*/\1/g'
+192.168.56.105
+```
+
+- 从文件中提取 ip 地址
+
+```bash
+$ grep -Eo \([0-9]\{1,3\}[\.]\)\{3\}[0-9] filename | sort | uniq
+```

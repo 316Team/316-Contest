@@ -21,3 +21,10 @@ $sed -ri "s/who ami 'i';/who ami 'wo';/g"  FILE_NAME
 ```bash
 $sed -ri -e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' httpd.conf
 ```
+
+- 利用 grep 和 sed 组合，只返回 eth1 的 ip 地址：
+
+```bash
+$ ifconfig eth1 | grep "inet addr" | sed 's/^[^:]*:\([^ ]*\).*/\1/g'
+192.168.56.105
+```
