@@ -29,3 +29,11 @@ $ git push -u origin v1.0
 ```shell
 $ git rm -rf DOCUMENT
 ```
+
+- 删除远程服务器文件，本地保留
+
+```shell
+$ git rm --cached filename/git rm -f --cached directory
+$ git commit -m "xxxx"
+$ git push
+```
