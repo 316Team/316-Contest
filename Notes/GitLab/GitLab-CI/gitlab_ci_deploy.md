@@ -3,14 +3,14 @@
 <!-- TOC -->
 
 - [介绍](#介绍)
-  - [GitLab-Ci](#GitLab-Ci)
-  - [GitLab-Runner](#GitLab-Runner)
+  - [GitLab-Ci](#gitlab-ci)
+  - [GitLab-Runner](#gitlab-runner)
     - [特征](#特征)
-  - [Pipelines](#Pipelines)
+  - [Pipelines](#pipelines)
 - [部署](#部署)
-  - [下载`Runner`镜像](#下载`Runner`镜像)
+  - [下载`Runner`镜像](#下载runner镜像)
   - [运行容器](#运行容器)
-  - [注册`Runner`](#注册`Runner`)
+  - [注册`Runner`](#注册runner)
   - [配置构建任务](#配置构建任务)
 
 <!-- TOC -->
