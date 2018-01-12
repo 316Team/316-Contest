@@ -37,3 +37,13 @@ $ git rm --cached filename/git rm -f --cached directory
 $ git commit -m "xxxx"
 $ git push
 ```
+
+
+### commit
+
+- 修改commit
+
+```shell
+$ git commit --amend
+$ git push -f
+```
