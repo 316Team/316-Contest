@@ -32,8 +32,8 @@ $ssh-keygen -t rsa -C "your_email"
 Enter file in which to save the key (/c/User/Administrator/.ssh/id_rsa)：id_rsa_work
 # 将id_rsa_work 添加到 SSH agent中
 $ssh-add ~/.ssh/id_rsa_work
-# 如果出现 Could not open a connection to your authentication agent 的错误，使用以下命令
-$ssh-agent absh
+# 如果出现`Could not open a connection to your authentication agent`的错误，使用以下命令
+$ssh-agent bash
 $ssh-add ~/.ssh/id_rsa_work
 # 创建 config 文件
 $touch config
@@ -43,4 +43,11 @@ HostName github.com
 # 域名或者IP地址
 User git
 IdentityFile C:/Users/Administrator/.ssh/id_rsa_work
+```
+
+- 权限
+
+```shell
+$ sudo chmod 0700 ~/.ssh
+$ sudo chmod 0600 ~/.ssh/id_rsa* // 此处包含所有key
 ```
