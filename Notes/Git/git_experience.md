@@ -47,3 +47,15 @@ $ git push
 $ git commit --amend
 $ git push -f
 ```
+
+
+### stash
+
+```shell
+$ git stash                           // 保存当前工作进度
+$ git stash list                      // 显示保存进度的列表
+$ git stash pop [-index] [stash_id]   // 恢复最新的进度到工作区
+$ git stash apply [-index] [stash_id] // 恢复最新的进度到工作区，且不删除进度
+$ git stash drop [stash_id]           // 不指定`stash_id`则删除最新的进度
+$ git stash clear                     // 删除所有的进度
+```
