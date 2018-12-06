@@ -28,16 +28,16 @@
      ```shell
      [root@Xen ~]# xe sr-list name-label=Local\ storage
      uuid ( RO)                : 8ecdc000-c195-6403-ab67-1de1e32c7782
-               name-label ( RW): Local storage                                          
+               name-label ( RW): Local storage
          name-description ( RW):
-                     host ( RO): 迷宫 出货版 [192.168.5.24]                                
-                     type ( RO): ext                                   
-             content-type ( RO): user                    
+                     host ( RO): 迷宫 出货版 [192.168.5.24]
+                     type ( RO): ext
+             content-type ( RO): user
      [root@Xen ~]# xe pbd-list sr-uuid=8ecdc000-c195-6403-ab67-1de1e32c7782
      uuid ( RO)                  : f090e706-57bc-eece-3e8f-1e7980b0b508                   host-uuid ( RO): b67fea44-4863-490f-85dc-5d09b4db6994
                     sr-uuid ( RO): 8ecdc000-c195-6403-ab67-1de1e32c7782
-              device-config (MRO): device: /dev/disk/by-id/ata-WDC_WD4002FYYZ-01B7CB0_N8GUM98Y-part3                                                         
-         currently-attached ( RO): false                                                 
+              device-config (MRO): device: /dev/disk/by-id/ata-WDC_WD4002FYYZ-01B7CB0_N8GUM98Y-part3
+         currently-attached ( RO): false
      [root@Xen ~]# xe pbd-unplug uuid=f090e706-57bc-eece-3e8f-1e7980b0b508
      [root@Xen ~]# xe sr-forget uuid=8ecdc000-c195-6403-ab67-1de1e32c7782
      ```
@@ -53,7 +53,7 @@
   5d088046-e50a-271f-a163-8b818e40021a
   # 此处的device 可以使用 ll /dev/disk/by-id/  查询
   [root@Xen ~]# ll /dev/disk/by-id/
-  总用量 0                                                   
+  总用量 0
   lrwxrwxrwx 1 root root  9 7月  13 14:46 ata-WDC_WD4002FYYZ-01B7CB0_N8GUM98Y -> ../../sda
   lrwxrwxrwx 1 root root 10 7月  13 14:46 ata-WDC_WD4002FYYZ-01B7CB0_N8GUM98Y-part1 -> ../../sda1
   lrwxrwxrwx 1 root root 10 7月  13 14:46 ata-WDC_WD4002FYYZ-01B7CB0_N8GUM98Y-part2 -> ../../sda2
@@ -69,3 +69,17 @@
 ![XenServer_Local_Storage_default](https://raw.githubusercontent.com/316Team/316-Contest/316Team/image/XenServer_Local_Storage_default.jpg)
 
 <p align="center">图-2</p>
+
+5. 虚拟机无法启动，报`operation cannot be performed because the specified VDI could not be found on the storage substrate sr: 4523c887-f182-7837-6830-128e7f04ccc0 (iso)`这个错时，可以查看一下`DVD`驱动是否为空，如果为空则可以弹出以清空。
+
+- 查看是否为空
+
+```shell
+xe vm-cd-list --multiple uuid={VM_UUID} | grep 'empty' | awk '{print $4}'
+```
+
+- 如果值为`false`，则可以执行以下命令
+
+```shell
+xe vm-cd-eject uuid={VM_UUID}
+```

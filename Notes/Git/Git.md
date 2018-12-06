@@ -51,3 +51,9 @@ IdentityFile C:/Users/Administrator/.ssh/id_rsa_work
 $ sudo chmod 0700 ~/.ssh
 $ sudo chmod 0600 ~/.ssh/id_rsa* // 此处包含所有key
 ```
+
+- 查看`git`提交
+
+```
+$ git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(r) —— %C(bold blue)%an%C(r): %C(white)%s%C(r) %C(dim white) %C(bold green)(%ar)%C(r) %C(bold yellow)%d%C(r)' --all
+```

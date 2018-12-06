@@ -36,3 +36,10 @@ $ ifconfig eth1 | grep "inet addr" | sed 's/^[^:]*:\([^ ]*\).*/\1/g'
 ```bash
 $ grep -Eo \([0-9]\{1,3\}[\.]\)\{3\}[0-9] filename | sort | uniq
 ```
+
+- 取出圆括号内的字符串
+
+```bash
+$ echo 'xxxx(zifuchuang)xxxxx' | grep -Po '(?<=\().*(?=\))'
+zifuchuang
+```

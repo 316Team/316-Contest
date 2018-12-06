@@ -12,3 +12,10 @@ $xe vm-list name-label=Rep params=networks
 $xe vm-list name-label=Rep params=networks | awk '{split($0,a,"0/ip:"); print a[2]}' | awk '{print $1}' | awk '{split ($0,a,";"); print a[1]}'
     172.16.2.202
 ```
+
+- 取出圆括号内的字符串
+
+```bash
+$ echo "xxx(zifuchuang)xxx" | awk -F "[()]" '{print $2}'
+zifuchuang
+```
