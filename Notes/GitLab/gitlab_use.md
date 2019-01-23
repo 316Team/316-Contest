@@ -1,23 +1,6 @@
-**目录**
-
-- [工作流程](工作流程#工作流程)
-    - [工单追踪](工作流程#工单追踪)
-        - [工单规范](工作流程#工单规范)
-    - [Issue看板](工作流程#Issue看板)
-    - [开发流程](工作流程#开发流程)
-        - [Git基础](工作流程#Git基础)
-        - [开发规范](工作流程#开发规范)
-        - [代码提交规范](工作流程#代码提交规范)
-        - [测试](工作流程#测试)
-        - [代码审查](工作流程#代码审查)
-        - [自动化部署](工作流程#自动化部署)
-
-
-# 工作流程
-
 ## 工单追踪
 
-不管是`Gitlab`还是`Github`都有一个强大的工单追溯系统，在使用的过程中，允许你和你的团队分享和讨论建议。
+`Gitlab`有一个强大的工单追溯系统，在使用的过程中，允许你和你的团队分享和讨论建议。
 
 ![issue tracker - view list](../../image/issue-tracker-list-view.png)
 
@@ -69,27 +52,3 @@
 [看板方法]()是一个非常好的工作方法，值得花费一些时间去好好学习。
 
 ![issue board](../../image/issue-board.gif)
-
-## 开发流程
-
-### Git基础
-
-- [Git基础使用](https://github.com/316Team/316-Contest/blob/316Team/Notes/Git/Git.md)
-- [廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-- [高质量Git中文教程](https://github.com/geeeeeeeeek/git-recipes/wiki)
-- [Markdown基础使用](https://github.com/316Team/316-Contest/blob/316Team/Notes/Git/Markdown_record.md)
-
-### 开发规范
-
-- [项目管理员开发操作流程]()
-- [开发人员开发操作流程]()
-
-### 代码提交规范
-
-### 测试
-
-### 代码审查
-
-### 自动化部署
-
-![git-flow](../../image/git-flow.png)

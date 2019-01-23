@@ -8,9 +8,13 @@
     - [特征](#特征)
   - [Pipelines](#pipelines)
 - [部署](#部署)
-  - [下载`Runner`镜像](#下载runner镜像)
-  - [运行容器](#运行容器)
-  - [注册`Runner`](#注册runner)
+
+  - [使用容器部署](#使用容器部署)
+
+    - [下载`Runner`镜像](#下载runner镜像)
+    - [运行容器](#运行容器)
+    - [注册`Runner`](#注册runner)
+  - [在Linux系统上直接部署](#在Linux系统上直接部署)
   - [配置构建任务](#配置构建任务)
 
 <!-- TOC -->
@@ -57,12 +61,14 @@
 
 ## 部署
 
-### 下载`Runner`镜像
+### 使用容器部署
+
+#### 下载`Runner`镜像
 
 ```bash
 $ sudo docker pull gitlab/gitlab-runner:latest
 ```
-### 运行容器
+#### 运行容器
 
 ```bash
 $ sudo docker run -d --name gitlab-runner --restart always \
@@ -71,7 +77,7 @@ $ sudo docker run -d --name gitlab-runner --restart always \
   gitlab/gitlab-runner:latest
 ```
 
-### 注册`Runner`
+#### 注册`Runner`
 
 1. 运行以下命令：
 
@@ -141,8 +147,22 @@ alpine:latest
 /etc/gitlab-runner/config.toml
 ```
 
-![gitlab-runner-register](https://github.com/316Team/316-Contest/blob/316Team/image/gitlab-runner-register.png)
-</br>
+### 在Linux系统上直接部署
+
+```bash
+$ curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
+$ sudo apt install gitlab-runner
+$ gitlab-runner register
+// 注册runner
+// 需要注册两个runner，前端和后端各一个
+$ mkdir -p /home/lilei/.gitlab-runner
+$ touch /home/lilei/.gitlab-runner/config.toml
+$ sudo gitlab-runner install -n "test" -d "/home/lilei" -c "/home/lilei/.gitlab-runner/config.toml" -u "cimer"
+// -n 指定服务名称， -d 指定工作路径， -c 指定配置文件, -u 指定执行用户
+$ sudo gitlab-runner start -n test
+```
+
+![gitlab-runner-register](../../../image/gitlab-runner-register.png)
 
 ### 配置构建任务
 
@@ -176,10 +196,11 @@ deploy2:
 
 
 
-![gitlab-runner-register](https://github.com/316Team/316-Contest/blob/316Team/image/gitlab-runner-Pipelines.png)
-</br>
+![gitlab-runner-register](../../../image/gitlab-runner-Pipelines.png)
 
-![gitlab-runner-register](https://github.com/316Team/316-Contest/blob/316Team/image/gitlab-runner-Pipelines-job.png)
-</br>
 
-![gitlab-runner-register](https://github.com/316Team/316-Contest/blob/316Team/image/gitlab-runner-Pipelines-job-success.png)
+![gitlab-runner-register](../../../image/gitlab-runner-Pipelines-job.png)
+
+
+
+![gitlab-runner-register](../../../image/gitlab-runner-Pipelines-job-success.png)
