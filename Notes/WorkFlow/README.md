@@ -38,4 +38,12 @@
 
 ### 自动化部署
 
-[gitlab CI 布置及使用](https://github.com/316Team/316-Contest/blob/316Team/Notes/GitLab/GitLab-CI/gitlab_ci_deploy.md)
+[gitlab CI 部署及使用](https://github.com/316Team/316-Contest/blob/316Team/Notes/GitLab/GitLab-CI/gitlab_ci_deploy.md)
+
+[参考文献]
+
+1. [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+2. [Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+3. [用工具思路来规范化 git commit message](https://github.com/pigcan/blog/issues/15)
+4. [GitLab Workflow: An Overview](https://about.gitlab.com/2016/10/25/gitlab-workflow-an-overview/)
+5. [Git 工作流程](http://www.ruanyifeng.com/blog/2015/12/git-workflow.html)
