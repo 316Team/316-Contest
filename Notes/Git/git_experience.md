@@ -22,6 +22,15 @@ $ git tag -d v1.0
 $ git push -u origin v1.0
 ```
 
+### describe
+
+`git describe` 可用来自动生成版本号，需要与`git tag`配合使用
+
+```shell
+$ git describe --tags --long
+v2.2.36-10-g1bebca9
+```
+
 ### rm
 
 - 删除本地目录
