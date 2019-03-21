@@ -28,7 +28,7 @@ Cloning disk './manjaro/manjaro.vmdk'...
 Clone: 100% done.
 ```
 
-然后在控制面板上创建虚拟机，在`自定义设置`中删除当前的硬盘，选择添加硬盘，。
+然后在控制面板上创建虚拟机，在`自定义设置`中删除当前的硬盘，选择添加硬盘，即可完成克隆。
 
 ![esxi_del_hard](../../../image/esxi_del_hard.png)
 
