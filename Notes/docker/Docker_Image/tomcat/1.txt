@@ -1,1 +1,0 @@
-               pattern="%h %l %u %t &quot;"%{Referer}i" "%{User-Agent}i" %{X-Forwarded-For}i%r&quot; %s %b" />
