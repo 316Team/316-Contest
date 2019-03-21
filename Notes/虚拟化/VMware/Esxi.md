@@ -3,5 +3,11 @@
 首先进入`/vmfs/volumes/Data1`目录，找出需要克隆的虚拟机，然后新建一个目录。
 
 ```shell
+[root:/vmfs/volumes/5aa7e9dc-7a13519c-81da-f01fafceebab] ls -l
+total 1168
+drwxr-xr-x    1 root     root          1260 Feb 14 14:44 iso
+drwxr-xr-x    1 root     root          2380 Aug 31  2018 kolla
+drwxr-xr-x    1 root     root          1680 Oct 18 13:07 manjaro
+drwxr-xr-x    1 root     root          3360 Dec 11 15:57 openstack-controller
 
 ```
