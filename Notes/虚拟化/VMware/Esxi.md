@@ -21,5 +21,8 @@ drwxr-xr-x    1 root     root          3360 Dec 11 15:57 openstack-controller
 
 目录建好后，准备克隆。
 ```shell
-
+[root:/vmfs/volumes/5aa7e9dc-7a13519c-81da-f01fafceebab] vmkfstools -i ./manjaro/manjaro1.vmdk ./manjaro1/manjaro1.vmdk
+Destination disk format: VMFS zeroedthick
+Cloning disk './test-centos5/test-centos5.vmdk'...
+Clone: 100% done.
 ```
