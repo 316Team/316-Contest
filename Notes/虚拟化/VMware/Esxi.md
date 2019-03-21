@@ -32,4 +32,6 @@ Clone: 100% done.
 
 ![esxi_del_hard](../../../image/esxi_del_hard.png)
 
-![esxi_add_hard_1](../../../)
+![esxi_add_hard_1](../../../image/esxi_add_hard_1.png)
+
+![esxi_add_hard_2](../../../image/esxi_add_hard_2.png)
